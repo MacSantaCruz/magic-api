@@ -28,7 +28,7 @@ app.use('/api/player', require('./routes/player'));
 // });
 
 
-app.listen(PORT, function() {
-     console.log(`Server listening on port ${PORT}`)
+app.listen(process.env.PORT, function() {
+     console.log(`Server listening on port ${process.env.PORT}`)
 });
 
