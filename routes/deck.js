@@ -4,13 +4,9 @@ const Deck = require('../models/deck');
 const mongoose = require('mongoose');
 
 router.get('/', function(req,res){
-    // Deck.model.find(function(err,deck){
-    //     res.json(deck);
-    // });
-        return res.status(200).json({
-          success: true,
-          message: "Hey there :)",
-        })
+    Deck.model.find(function(err,deck){
+         res.json(deck);
+    });
 });
 
 
