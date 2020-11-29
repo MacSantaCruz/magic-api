@@ -6,8 +6,6 @@ const router = require('./routes/index');
 
 
 const app = express();
-//const PORT = 3001;
-//const MONGODB_URI = "mongodb://localhost:27017/my_local_db";
 const MONGODB_URI = process.env.MONGODB_URI;
 app.use(cors());
 
