@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 router.get('/', function(req,res){
  Player.model.find()
  .populate({path:'wins losses',
-  populate:{path:'winner loser', 
-  populate:{path:'deck'}}}).exec(function(err, Player){
+  populate:{path:'winner loser',
+  populate:{path:'deck player', select:["name", "color"]}}}).exec(function(err, Player){
         res.json(Player);
     });
 });
